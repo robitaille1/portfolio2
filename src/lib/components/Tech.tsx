@@ -17,63 +17,54 @@ const tools = [
     name: "React.js",
     description: "A JavaScript library for building user interfaces.",
     icon: <FaReact fontSize="20px" />,
-    url: "https://www.reactjs.org",
   },
   {
     name: "Javascript",
-    description: "These days you can't build an amazing product without JS.",
+    description: "Client side scripting to make dynamic interactive pages.",
     icon: <FaJs fontSize="20px" />,
-    url: "https://www.javascript.info",
   },
   {
     name: "Shopify",
-    description:
-      "These days you can't build an amazing product without Shopify.",
+    description: "Building custom ecommerce sites for Shopify stores.",
     icon: <FaShopify fontSize="20px" />,
-    url: "https://www.mongodb.com/",
   },
   {
     name: "TypeScript",
-    description: "These days you can't build an amazing product without TS.",
+    description:
+      "Object-oriented javascript, very helpful in larger scale apps.",
     icon: <SiTypescript fontSize="20px" />,
-    url: "https://www.mongodb.com/",
   },
   {
     name: "Next.js",
-    description: "These days you can't build an amazing product without next.",
+    description:
+      "One of my favorite react frameworks, especially for server-side rendering.",
     icon: <SiNextdotjs fontSize="20px" />,
-    url: "https://www.mongodb.com/",
   },
   {
     name: "CSS Frameworks and Component Libraries",
     description: "SASS, Chakra UI, Material UI, Styled Components",
     icon: <MdLineStyle fontSize="20px" />,
-    url: "https://www.mongodb.com/",
   },
   {
     name: "Node.js",
-    description: "Chrome's V8 JavaScript engine for server-side javascript.",
+    description: "JavaScript engine for server-side javascript.",
     icon: <FaNodeJs fontSize="20px" />,
-    url: "https://www.nodejs.org",
   },
   {
     name: "Google Cloud",
-    description: "Chrome's V8 JavaScript engine for server-side javascript.",
+    description: "My choice for cloud computing services.",
     icon: <DiGoogleCloudPlatform fontSize="20px" />,
-    url: "https://www.nodejs.org",
   },
   {
     name: "SQL & MongoDB",
-    description: "Both database are great, and they have their use cases.",
+    description: "Differente databases for different use cases!",
     icon: <FaDatabase fontSize="20px" />,
-    url: "https://www.mongodb.com/",
   },
   {
     name: "GIT & Github",
     description:
       "A version control system that gives you a lot of flexibility.",
     icon: <FaGitAlt fontSize="20px" />,
-    url: "https://medium.com/swlh/things-about-git-and-github-you-need-to-know-as-developer-907baa0bed79",
   },
 ];
 
