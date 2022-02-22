@@ -9,13 +9,12 @@ import {
 } from "@chakra-ui/react";
 
 type Tool = {
-  url: string;
   name: string;
   description: string;
   icon: JSX.Element;
 };
 
-const TechCard = ({ url, name, description, icon }: Tool) => {
+const TechCard = ({ name, description, icon }: Tool) => {
   return (
     <LinkBox as="article">
       <Box
@@ -35,7 +34,6 @@ const TechCard = ({ url, name, description, icon }: Tool) => {
       >
         <IconButton
           as="a"
-          href={url}
           rel="noopener"
           target="_blank"
           aria-label={name}
@@ -44,7 +42,7 @@ const TechCard = ({ url, name, description, icon }: Tool) => {
           icon={icon}
         />
         <Box>
-          <LinkOverlay href={url} rel="noopener" isExternal>
+          <LinkOverlay rel="noopener" isExternal>
             <Heading as="h2" size="sm">
               {name}
             </Heading>
