@@ -1,4 +1,10 @@
-import { Heading, Container, Grid, Text } from "@chakra-ui/react";
+import {
+  Heading,
+  Container,
+  Grid,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { DiGoogleCloudPlatform } from "react-icons/di";
 import {
   FaNodeJs,
@@ -57,7 +63,7 @@ const tools = [
   },
   {
     name: "SQL & MongoDB",
-    description: "Differente databases for different use cases!",
+    description: "Different databases for different use cases!",
     icon: <FaDatabase fontSize="20px" />,
   },
   {
@@ -74,9 +80,10 @@ const Stack = () => {
       <Heading as="h2" fontSize={{ base: "lg", sm: "xl", lg: "3xl" }} mb={3}>
         Primary Stack & Technologies
       </Heading>
-      <Text lineHeight={1.5} color="gray.500">
-        As a full-stack web developer there are alot of tools you use in your
-        daily bases, these are primary tools that I use & like.
+      <Text lineHeight={1.5} color={useColorModeValue("gray.700", "gray.400")}>
+        As a software engineer, there are many different tools that can be used
+        on a daily basis. I love taking on new technologies to further my skill
+        set. These are the primary tools that I use most often.
       </Text>
       <Grid mt={10} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]} gap={5}>
         {tools.map((tool) => (

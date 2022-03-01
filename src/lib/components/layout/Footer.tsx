@@ -10,7 +10,7 @@ const Footer = () => {
       <ButtonGroup variant="ghost">
         <IconButton
           as="a"
-          href="mailto:lucas.robitaille@yahoo.com"
+          href="mailto:lucas@robitaille.xyz"
           aria-label="Email Me"
           icon={<FaEnvelope fontSize="20px" />}
         />

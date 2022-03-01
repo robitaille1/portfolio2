@@ -44,7 +44,7 @@ export default function Hero() {
             color={useColorModeValue("gray.700", "gray.400")}
             pr={10}
           >
-            I am a creative, problem solving software engineer. I love working
+            I am a creative, problem-solving software engineer. I love working
             in teams and contributing to projects that I feel passionate about.
             Creating dynamic, responsive, and interactive web apps is what I do
             best.
@@ -68,7 +68,7 @@ export default function Hero() {
                 My Work
               </Button>
             </Link>
-            <ReachLink href="mailto:lucas.robitaille@yahoo.com">
+            <ReachLink href="mailto:lucas@robitaille.xyz">
               <Button
                 fontSize="sm"
                 rounded="lg"
