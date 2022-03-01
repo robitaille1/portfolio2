@@ -12,7 +12,7 @@ import { MdCheckCircle } from "react-icons/md";
 
 const Timeline = () => {
   return (
-    <Container mt="50px !important" maxW="7xl">
+    <Container p={0} mt="50px !important" maxW="7xl">
       <Heading as="h2" fontSize={{ base: "lg", sm: "xl", lg: "3xl" }} mb={3}>
         Experience
       </Heading>
