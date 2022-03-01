@@ -4,6 +4,7 @@ import {
   Grid,
   Text,
   useColorModeValue,
+  SlideFade,
 } from "@chakra-ui/react";
 import { DiGoogleCloudPlatform } from "react-icons/di";
 import {
@@ -77,21 +78,30 @@ const tools = [
 
 const Stack = () => {
   return (
-    <Container maxW="7xl">
-      <Heading as="h2" fontSize={{ base: "lg", sm: "xl", lg: "3xl" }} mb={3}>
-        Primary Stack & Technologies
-      </Heading>
-      <Text lineHeight={1.5} color={useColorModeValue("gray.700", "gray.400")}>
-        As a software engineer, there are many different tools that can be used
-        on a daily basis. I love taking on new technologies to further my skill
-        set. These are the primary tools that I use most often.
-      </Text>
-      <Grid mt={10} templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]} gap={5}>
-        {tools.map((tool) => (
-          <TechCard {...tool} key={tool?.name} />
-        ))}
-      </Grid>
-    </Container>
+    <SlideFade in offsetY={80} delay={0.2}>
+      <Container p={0} maxW="7xl">
+        <Heading as="h2" fontSize={{ base: "lg", sm: "xl", lg: "3xl" }} mb={3}>
+          Primary Stack & Technologies
+        </Heading>
+        <Text
+          lineHeight={1.5}
+          color={useColorModeValue("gray.700", "gray.400")}
+        >
+          As a software engineer, there are many different tools that can be
+          used on a daily basis. I love taking on new technologies to further my
+          skill set. These are the primary tools that I use most often.
+        </Text>
+        <Grid
+          mt={10}
+          templateColumns={["1fr", "1fr", "repeat(2, 1fr)"]}
+          gap={5}
+        >
+          {tools.map((tool) => (
+            <TechCard {...tool} key={tool?.name} />
+          ))}
+        </Grid>
+      </Container>
+    </SlideFade>
   );
 };
 

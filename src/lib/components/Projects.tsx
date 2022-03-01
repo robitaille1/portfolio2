@@ -4,6 +4,7 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  SlideFade,
 } from "@chakra-ui/react";
 
 import ProjectCard from "./ProjectCard";
@@ -18,6 +19,7 @@ const projects = [
     repo: "https://github.com/robitaille1/solar-ne",
     image:
       "https://res.cloudinary.com/robitaille/image/upload/v1646171739/SPNE-1646171699292_vae5i8.png",
+    delay: 0.2,
   },
   {
     name: "Polka Dot Print Shop",
@@ -28,6 +30,7 @@ const projects = [
     repo: "",
     image:
       "https://res.cloudinary.com/robitaille/image/upload/v1646171925/PDPS-1646171913723_nwr8s3.png",
+    delay: 0.3,
   },
   {
     name: "Austin Mask Exchange",
@@ -38,6 +41,7 @@ const projects = [
     repo: "https://github.com/robitaille1/atx-mask-exchange",
     image:
       "https://res.cloudinary.com/robitaille/image/upload/v1646172154/ATXME-1646172137979_zf9rwg.png",
+    delay: 0.4,
   },
   {
     name: "PUERH / CAFE",
@@ -48,45 +52,48 @@ const projects = [
     repo: "https://github.com/robitaille1/puerh-cafe",
     image:
       "https://res.cloudinary.com/robitaille/image/upload/v1646172388/puerh-1646172375085_hug0vr.png",
+    delay: 0.5,
   },
 ];
 
 export default function Projects() {
   return (
-    <Container maxW="7xl">
+    <Container p={0} maxW="7xl">
       <Stack
         align="start"
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
         direction="column"
       >
-        <Heading
-          as="h2"
-          lineHeight={1.1}
-          fontWeight={600}
-          fontSize={{ base: "2xl", lg: "4xl" }}
-        >
-          Projects{" "}
-          <Text as="span" role="img" aria-label="pin">
-            &#x1f468;
+        <SlideFade in offsetY={80}>
+          <Heading
+            as="h2"
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: "2xl", lg: "4xl" }}
+          >
+            Projects{" "}
+            <Text as="span" role="img" aria-label="pin">
+              &#x1f468;
+            </Text>
+            <Text as="span" role="img" aria-label="pin">
+              &#x200d;
+            </Text>
+            <Text as="span" role="img" aria-label="pin">
+              &#x1f4bb;
+            </Text>
+          </Heading>
+          <Text
+            marginTop="7px !important"
+            color={useColorModeValue("gray.700", "gray.400")}
+            w="90%"
+          >
+            Throughout my career, I have always wanted to be involved with great
+            organizations and to work on projects that help further their
+            growth. These are a few of the projects that I&apos;ve had the
+            pleasure to be a part of, outside of my full-time roles.
           </Text>
-          <Text as="span" role="img" aria-label="pin">
-            &#x200d;
-          </Text>
-          <Text as="span" role="img" aria-label="pin">
-            &#x1f4bb;
-          </Text>
-        </Heading>
-        <Text
-          marginTop="7px !important"
-          color={useColorModeValue("gray.700", "gray.400")}
-          w="90%"
-        >
-          Throughout my career, I have always wanted to be involved with great
-          organizations and to work on projects that help further their growth.
-          These are a few of the projects that I&apos;ve had the pleasure to be
-          a part of, outside of my full-time roles.
-        </Text>
+        </SlideFade>
 
         {projects.map((project) => (
           <ProjectCard {...project} key={project?.name} />
