@@ -6,10 +6,13 @@ import {
   Text,
   Button,
   useColorMode,
-  Link,
+  Link as ReachLink,
   Image,
   Box,
+  AspectRatio,
+  useColorModeValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 export default function Hero() {
   const { colorMode } = useColorMode();
@@ -36,7 +39,11 @@ export default function Hero() {
             </Text>
             California
           </Text>
-          <Text marginTop="7px !important" color="gray.500" pr={10}>
+          <Text
+            marginTop="7px !important"
+            color={useColorModeValue("gray.700", "gray.400")}
+            pr={10}
+          >
             I am a creative, problem solving software engineer. I love working
             in teams and contributing to projects that I feel passionate about.
             Creating dynamic, responsive, and interactive web apps is what I do
@@ -47,19 +54,21 @@ export default function Hero() {
             direction={{ base: "column", sm: "row" }}
             marginTop="20px !important"
           >
-            <Button
-              size="lg"
-              fontWeight="normal"
-              rounded="lg"
-              px={6}
-              colorScheme="blue"
-              bg={colorMode === "light" ? "blue.800" : "white"}
-              _hover={{ bg: colorMode === "light" ? "blue.700" : "gray.300" }}
-              fontSize="sm"
-            >
-              My Work
-            </Button>
-            <Link href="mailto:lucas.robitaille@yahoo.com">
+            <Link href="/projects">
+              <Button
+                size="lg"
+                fontWeight="normal"
+                rounded="lg"
+                px={6}
+                colorScheme="blue"
+                bg={colorMode === "light" ? "blue.800" : "white"}
+                _hover={{ bg: colorMode === "light" ? "blue.700" : "gray.300" }}
+                fontSize="sm"
+              >
+                My Work
+              </Button>
+            </Link>
+            <ReachLink href="mailto:lucas.robitaille@yahoo.com">
               <Button
                 fontSize="sm"
                 rounded="lg"
@@ -69,7 +78,7 @@ export default function Hero() {
               >
                 Reach out!
               </Button>
-            </Link>
+            </ReachLink>
           </Stack>
         </Stack>
         <Flex flex={1} w="full" pt={5}>
@@ -82,7 +91,14 @@ export default function Hero() {
             }
             borderRadius="lg"
           >
-            <Image borderRadius="lg" src="/me.png" alt="Lucas Robitaille" />
+            <AspectRatio maxW="150px" ratio={1}>
+              <Image
+                fit={"contain"}
+                borderRadius="lg"
+                src="/me.jpg"
+                alt="Lucas Robitaille"
+              />
+            </AspectRatio>
           </Box>
         </Flex>
       </Stack>
