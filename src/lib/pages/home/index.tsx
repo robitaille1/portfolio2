@@ -1,8 +1,8 @@
 import { Box, Stack } from "@chakra-ui/react";
 
+import Experience from "../../components/Experience";
 import Hero from "../../components/Hero";
 import Tech from "../../components/Tech";
-import Experience from "../../components/Experience";
 
 const Home = () => {
   return (

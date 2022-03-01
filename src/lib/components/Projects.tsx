@@ -3,9 +3,9 @@ import {
   Stack,
   Heading,
   Text,
-  Box,
   useColorModeValue,
 } from "@chakra-ui/react";
+
 import ProjectCard from "./ProjectCard";
 
 const projects = [
@@ -80,12 +80,12 @@ export default function Projects() {
         <Text
           marginTop="7px !important"
           color={useColorModeValue("gray.700", "gray.400")}
-          w={"90%"}
+          w="90%"
         >
           Throughout my career, I have always wanted to be involved with great
           organizations and to work on projects that help further their growth.
-          These are a few of the projects that I've had the pleasure to be a
-          part of, outside of my full-time roles.
+          These are a few of the projects that I&apos;ve had the pleasure to be
+          a part of, outside of my full-time roles.
         </Text>
 
         {projects.map((project) => (

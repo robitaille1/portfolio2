@@ -1,5 +1,4 @@
 import {
-  Badge,
   Button,
   Center,
   Flex,
@@ -39,7 +38,7 @@ const ProjectCard = ({
         height={{ sm: "max-content", md: "20rem" }}
         direction={{ base: "column", md: "row" }}
         bg={useColorModeValue("white", "gray.900")}
-        boxShadow={"2xl"}
+        boxShadow="2xl"
         padding={4}
       >
         <Flex flex={1}>
@@ -49,13 +48,13 @@ const ProjectCard = ({
           <Heading
             px={{ base: 0, md: 4 }}
             my={2}
-            fontSize={"xl"}
-            fontFamily={"body"}
+            fontSize="xl"
+            fontFamily="body"
           >
             {name}
           </Heading>
           <Text
-            textAlign={"left"}
+            textAlign="left"
             color={useColorModeValue("gray.700", "gray.400")}
             px={{ base: 0, md: 4 }}
           >
@@ -63,9 +62,9 @@ const ProjectCard = ({
           </Text>
           <Flex
             px={{ base: 0, md: 3 }}
-            align={"center"}
-            justify={"start"}
-            direction={"row"}
+            align="center"
+            justify="start"
+            direction="row"
             mt={3}
             wrap="wrap"
           >
@@ -73,9 +72,10 @@ const ProjectCard = ({
               <Tag
                 mx={1}
                 mt={2}
-                size={"sm"}
+                size="sm"
                 variant="solid"
-                bgColor={useColorModeValue("blue.700", "blue.800")}
+                bg="blue.700"
+                _dark={{ bg: "blue.800" }}
                 key={tag}
               >
                 {tag}
@@ -84,16 +84,16 @@ const ProjectCard = ({
           </Flex>
 
           <Flex
-            width={"100%"}
+            width="100%"
             mt={3}
-            direction={"row"}
+            direction="row"
             pt={2}
             px={{ base: 0, md: 4 }}
-            justifyContent={"start"}
-            alignItems={"center"}
+            justifyContent="start"
+            alignItems="center"
           >
             {live && (
-              <Link isExternal={true} href={live}>
+              <Link isExternal href={live}>
                 <Button
                   size="md"
                   fontWeight="normal"
@@ -112,7 +112,7 @@ const ProjectCard = ({
               </Link>
             )}
             {repo && (
-              <Link isExternal={true} href={repo}>
+              <Link isExternal href={repo}>
                 <Button
                   fontSize="sm"
                   rounded="lg"
