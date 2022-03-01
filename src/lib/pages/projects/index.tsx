@@ -1,4 +1,5 @@
-import { Container, Stack, Heading, Text, Box } from "@chakra-ui/react";
+import { Stack, Box } from "@chakra-ui/react";
+
 import Projects from "lib/components/Projects";
 
 const About = () => {

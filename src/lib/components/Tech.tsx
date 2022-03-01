@@ -14,8 +14,9 @@ import {
   FaGitAlt,
   FaShopify,
 } from "react-icons/fa";
-import { SiNextdotjs, SiTypescript } from "react-icons/si";
 import { MdLineStyle } from "react-icons/md";
+import { SiNextdotjs, SiTypescript } from "react-icons/si";
+
 import TechCard from "./TechCard";
 
 const tools = [

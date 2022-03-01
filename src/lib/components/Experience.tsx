@@ -7,8 +7,8 @@ import {
   Text,
   Icon,
 } from "@chakra-ui/react";
-import { MdCheckCircle } from "react-icons/md";
 import { BsDot } from "react-icons/bs";
+import { MdCheckCircle } from "react-icons/md";
 
 const Timeline = () => {
   return (
@@ -16,7 +16,7 @@ const Timeline = () => {
       <Heading as="h2" fontSize={{ base: "lg", sm: "xl", lg: "3xl" }} mb={3}>
         Experience
       </Heading>
-      <Heading display="flex" alignItems={"center"} as="h2" size="md">
+      <Heading display="flex" alignItems="center" as="h2" size="md">
         4ocean <Icon mt="3px" as={BsDot} /> 06.2020 - Current
       </Heading>
       <Text mb={5}>Software Engineer</Text>

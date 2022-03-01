@@ -1,7 +1,6 @@
 import {
   Box,
   Flex,
-  Heading,
   Link as ChakraLink,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -11,22 +10,19 @@ import { useRouter } from "next/router";
 import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
-  let router = useRouter();
-  let { asPath } = router;
+  const router = useRouter();
+  const { asPath } = router;
   return (
     <Flex as="header" width="full" align="center">
       <Box>
-        <Link href="/">
+        <Link passHref href="/">
           <ChakraLink
             p={2}
-            rounded={"md"}
+            rounded="md"
             fontSize="sm"
             mr={3}
-            bg={
-              "/" === asPath
-                ? useColorModeValue("gray.100", "gray.700")
-                : "none"
-            }
+            bg={asPath === "/" ? "gray.100" : "none"}
+            _dark={{ bg: asPath === "/" ? "gray.700" : "none" }}
             _hover={{
               textDecoration: "none",
               bg: useColorModeValue("gray.200", "gray.700"),
@@ -36,16 +32,13 @@ const Header = () => {
           </ChakraLink>
         </Link>
 
-        <Link href="/projects">
+        <Link passHref href="/projects">
           <ChakraLink
             p={2}
-            rounded={"md"}
+            rounded="md"
             fontSize="sm"
-            bg={
-              "/projects" === asPath
-                ? useColorModeValue("gray.100", "gray.700")
-                : "none"
-            }
+            bg={asPath === "/projects" ? "gray.100" : "none"}
+            _dark={{ bg: asPath === "/projects" ? "gray.700" : "none" }}
             _hover={{
               textDecoration: "none",
               bg: useColorModeValue("gray.200", "gray.700"),

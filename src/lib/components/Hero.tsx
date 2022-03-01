@@ -54,7 +54,7 @@ export default function Hero() {
             direction={{ base: "column", sm: "row" }}
             marginTop="20px !important"
           >
-            <Link href="/projects">
+            <Link passHref href="/projects">
               <Button
                 size="lg"
                 fontWeight="normal"
@@ -93,7 +93,7 @@ export default function Hero() {
           >
             <AspectRatio maxW="150px" ratio={1}>
               <Image
-                fit={"contain"}
+                fit="contain"
                 borderRadius="lg"
                 src="/me.jpg"
                 alt="Lucas Robitaille"
