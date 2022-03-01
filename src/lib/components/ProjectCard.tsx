@@ -6,103 +6,127 @@ import {
   Heading,
   Image,
   Link,
-  Stack,
   Text,
   useColorModeValue,
   useColorMode,
   Tag,
 } from "@chakra-ui/react";
 
-const ProjectCard = () => {
+type Project = {
+  name: string;
+  description: string;
+  tags: string[];
+  live: string;
+  repo: string;
+  image: string;
+};
+
+const ProjectCard = ({
+  name,
+  description,
+  tags,
+  live,
+  repo,
+  image,
+}: Project) => {
   const { colorMode } = useColorMode();
   return (
-    <Center py={6}>
-      <Stack
+    <Center py={6} marginTop="0 !important">
+      <Flex
         borderWidth="1px"
         borderRadius="lg"
         w="100%"
-        height={{ sm: "476px", md: "20rem" }}
+        height={{ sm: "max-content", md: "20rem" }}
         direction={{ base: "column", md: "row" }}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
         padding={4}
       >
-        <Flex flex={1} bg="blue.200">
-          <Image
-            objectFit="cover"
-            boxSize="100%"
-            src={
-              "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-            }
-          />
+        <Flex flex={1}>
+          <Image objectFit="contain" boxSize="100%" src={image} />
         </Flex>
-        <Stack flex={1} flexDirection="column" justifyContent="center" p={1}>
-          <Heading px={3} mt={6} fontSize={"2xl"} fontFamily={"body"}>
-            PUERH / CAFE
+        <Flex flex={1} flexDirection="column" justifyContent="start" p={1}>
+          <Heading
+            px={{ base: 0, md: 4 }}
+            my={2}
+            fontSize={"xl"}
+            fontFamily={"body"}
+          >
+            {name}
           </Heading>
           <Text
             textAlign={"left"}
             color={useColorModeValue("gray.700", "gray.400")}
-            px={3}
+            px={{ base: 0, md: 4 }}
           >
-            An app that helps users organize their pu’erh teas by adding
-            collections and tasting notes. Keep track of how your teas age, and
-            how the flavor profile changes over time
+            {description}
           </Text>
-          <Stack
-            px={3}
+          <Flex
+            px={{ base: 0, md: 3 }}
             align={"center"}
             justify={"start"}
             direction={"row"}
-            mt={6}
+            mt={3}
+            wrap="wrap"
           >
-            <Tag size={"sm"} variant="solid" colorScheme="blue">
-              React
-            </Tag>
-            <Tag size={"sm"} variant="solid" colorScheme="blue">
-              Node Js
-            </Tag>
-            <Tag size={"sm"} variant="solid" colorScheme="blue">
-              Express
-            </Tag>
-            <Tag size={"sm"} variant="solid" colorScheme="blue">
-              PostgreSQL
-            </Tag>
-          </Stack>
+            {tags.map((tag) => (
+              <Tag
+                mx={1}
+                mt={2}
+                size={"sm"}
+                variant="solid"
+                bgColor={useColorModeValue("blue.700", "blue.800")}
+                key={tag}
+              >
+                {tag}
+              </Tag>
+            ))}
+          </Flex>
 
-          <Stack
+          <Flex
             width={"100%"}
-            mt={"2rem"}
+            mt={3}
             direction={"row"}
-            padding={2}
+            pt={2}
+            px={{ base: 0, md: 4 }}
             justifyContent={"start"}
             alignItems={"center"}
           >
-            <Button
-              size="md"
-              fontWeight="normal"
-              rounded="lg"
-              px={6}
-              mr={3}
-              colorScheme="blue"
-              bg={colorMode === "light" ? "blue.800" : "white"}
-              _hover={{ bg: colorMode === "light" ? "blue.700" : "gray.300" }}
-              fontSize="sm"
-            >
-              View Live
-            </Button>
-            <Button
-              fontSize="sm"
-              rounded="lg"
-              size="md"
-              fontWeight="normal"
-              px={6}
-            >
-              View Repo
-            </Button>
-          </Stack>
-        </Stack>
-      </Stack>
+            {live && (
+              <Link isExternal={true} href={live}>
+                <Button
+                  size="md"
+                  fontWeight="normal"
+                  rounded="lg"
+                  px={6}
+                  mr={3}
+                  colorScheme="blue"
+                  bg={colorMode === "light" ? "blue.800" : "white"}
+                  _hover={{
+                    bg: colorMode === "light" ? "blue.700" : "gray.300",
+                  }}
+                  fontSize="sm"
+                >
+                  View Live
+                </Button>
+              </Link>
+            )}
+            {repo && (
+              <Link isExternal={true} href={repo}>
+                <Button
+                  fontSize="sm"
+                  rounded="lg"
+                  size="md"
+                  fontWeight="normal"
+                  px={6}
+                >
+                  View Repo
+                </Button>
+              </Link>
+            )}
+          </Flex>
+        </Flex>
+      </Flex>
     </Center>
   );
 };

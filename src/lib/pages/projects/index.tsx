@@ -1,12 +1,11 @@
-import { Box, Stack, Heading } from "@chakra-ui/react";
-import ProjectCard from "../../components/ProjectCard";
+import { Container, Stack, Heading, Text, Box } from "@chakra-ui/react";
+import Projects from "lib/components/Projects";
 
 const About = () => {
   return (
-    <Box maxW="7xl" display={{ md: "flex" }} minHeight="70vh" w="full">
-      <Stack py={{ base: 20, md: 28 }}>
-        <Heading>Projects</Heading>
-        <ProjectCard />
+    <Box display={{ md: "flex" }} minHeight="70vh" w="full">
+      <Stack>
+        <Projects />
       </Stack>
     </Box>
   );
