@@ -35,7 +35,7 @@ const Timeline = () => {
         <ListItem>
           <ListIcon as={MdCheckCircle} color="blue.700" />
           Documenting and maintaining solutions by developing documentation,
-          flowcharts, layouts, diagrams, charts, code comments, and clear code.
+          flowcharts, layouts, diagrams, code comments, and clear code.
         </ListItem>
       </List>
       <Heading mt={10} mb={5} as="h2" size="md">
@@ -44,12 +44,13 @@ const Timeline = () => {
       <List spacing={18} fontSize="16">
         <ListItem>
           <ListIcon as={MdCheckCircle} color="blue.700" />
-          Working in a team to create large-scale web applications, based on
-          client and UI specifications.
+          Working in a team to create large-scale Javascript web applications,
+          based on client requirements and UI specifications.
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color="blue.700" />
-          Execute all levels of testing (System, Integration, and Regression)
+          Execute all levels of testing (System, Integration, Browser and
+          Regression)
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color="blue.700" />
