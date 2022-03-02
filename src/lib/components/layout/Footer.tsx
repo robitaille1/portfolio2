@@ -19,12 +19,16 @@ const Footer = () => {
           href="https://www.linkedin.com/in/lucas-robitaille/"
           aria-label="Linkedin"
           icon={<FaLinkedin fontSize="20px" />}
+          target="_blank"
+          rel="noopener noreferrer"
         />
         <IconButton
           as="a"
           href="https://github.com/robitaille1"
           aria-label="Github"
           icon={<FaGithub fontSize="20px" />}
+          target="_blank"
+          rel="noopener noreferrer"
         />
       </ButtonGroup>
     </Flex>
