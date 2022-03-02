@@ -62,7 +62,8 @@ export default function Projects() {
       <Stack
         align="start"
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        pt={{ base: 5, md: 28 }}
+        pb={{ base: 20, md: 28 }}
         direction="column"
       >
         <SlideFade in offsetY={80}>
@@ -86,7 +87,7 @@ export default function Projects() {
           <Text
             marginTop="7px !important"
             color={useColorModeValue("gray.700", "gray.400")}
-            w="90%"
+            w={{ base: "100%", md: "90%" }}
           >
             Throughout my career, I have always wanted to be involved with great
             organizations and to work on projects that help further their

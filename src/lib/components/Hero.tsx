@@ -23,7 +23,8 @@ export default function Hero() {
         <Stack
           align="start"
           spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}
+          pt={{ base: 5, md: 28 }}
+          pb={{ base: 20, md: 28 }}
           direction={{ base: "column-reverse", md: "row" }}
         >
           <Stack>
