@@ -5,6 +5,7 @@ import {
   Text,
   useColorModeValue,
   SlideFade,
+  Box,
 } from "@chakra-ui/react";
 
 import ProjectCard from "./ProjectCard";
@@ -85,7 +86,7 @@ export default function Projects() {
             </Text>
           </Heading>
           <Text
-            marginTop="7px !important"
+            mt={3}
             color={useColorModeValue("gray.700", "gray.400")}
             w={{ base: "100%", md: "90%" }}
           >
@@ -94,11 +95,22 @@ export default function Projects() {
             growth. These are a few of the projects that I&apos;ve had the
             pleasure to be a part of, outside of my full-time roles.
           </Text>
+          <Text
+            mt={4}
+            color={useColorModeValue("gray.700", "gray.400")}
+            w={{ base: "100%", md: "90%" }}
+          >
+            Please reach out if you would like further examples of my work. I
+            have other projects that I&apos;ve worked on that I&apos;m unable to
+            include in my public portfolio.
+          </Text>
         </SlideFade>
 
-        {projects.map((project) => (
-          <ProjectCard {...project} key={project?.name} />
-        ))}
+        <Box marginTop="0 !important">
+          {projects.map((project) => (
+            <ProjectCard {...project} key={project?.name} />
+          ))}
+        </Box>
       </Stack>
     </Container>
   );
