@@ -17,7 +17,29 @@ const Timeline = () => {
         Experience
       </Heading>
       <Heading display="flex" alignItems="center" as="h2" size="md">
-        4ocean <Icon mt="3px" as={BsDot} /> 06.2020 - Current
+        NFT.com / Immutable Holdings <Icon mt="3px" as={BsDot} /> 06.2022 -
+        Current
+      </Heading>
+      <Text mb={5}>Senior Frontend Software Engineer</Text>
+      <List spacing={18} fontSize="16">
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color="blue.700" />
+          Working with Next.js, React, Tailwind css to build the NFT.com
+          platform.
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color="blue.700" />
+          Utilizing and interfacing with various Web3 technologies, such as
+          Smart Contracts, Wagmi and RainbowKit.
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color="blue.700" />
+          Participating in code reviews, project leadership, and maintaining
+          documentation.
+        </ListItem>
+      </List>
+      <Heading mt={10} display="flex" alignItems="center" as="h2" size="md">
+        4ocean <Icon mt="3px" as={BsDot} /> 06.2020 - 06.2022
       </Heading>
       <Text mb={5}>Software Engineer</Text>
       <List spacing={18} fontSize="16">
