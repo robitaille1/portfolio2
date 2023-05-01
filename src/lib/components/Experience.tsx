@@ -29,8 +29,18 @@ const Timeline = () => {
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color="blue.700" />
-          Utilizing and interfacing with various Web3 technologies, such as
-          Smart Contracts, Wagmi and RainbowKit.
+          Creating web applications that interact with the blockchain and
+          leading the development of our proprietary protocol
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color="blue.700" />
+          Helping to define the technical direction and vision for maintaining
+          and scaling our web product for long-term success
+        </ListItem>
+        <ListItem>
+          <ListIcon as={MdCheckCircle} color="blue.700" />
+          Collaborating across teams with UI/UX designers and product to
+          implement great user interfaces
         </ListItem>
         <ListItem>
           <ListIcon as={MdCheckCircle} color="blue.700" />
