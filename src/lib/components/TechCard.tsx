@@ -25,7 +25,7 @@ const TechCard = ({ name, description, icon }: Tool) => {
         borderWidth="1px"
         transition=".5s"
         cursor="pointer"
-        d="flex"
+        display="flex"
         role="group"
         h="100%"
         _hover={{
